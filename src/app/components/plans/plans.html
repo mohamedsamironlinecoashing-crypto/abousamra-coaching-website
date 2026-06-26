@@ -1,0 +1,64 @@
+<section class="pricing-section">
+    <!-- Background effects -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--left" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--right" aria-hidden="true"></div>
+
+    <div class="pricing-header" [class.visible]="headerVisible">
+        <h2 class="pricing-title">
+            {{ labels().plans.titlePrefix }} <span class="gradient-text">{{ labels().plans.titleHighlight }}</span> {{ labels().plans.titleSuffix }}
+        </h2>
+        <p class="pricing-subtitle">
+            {{ labels().plans.subtitle }}
+        </p>
+    </div>
+
+    <div class="pricing-cards">
+        <div class="pricing-card"
+            *ngFor="let plan of planCards(); let cardIndex = index; trackBy: trackPlan"
+            [ngClass]="['card--' + plan.id]"
+            [class.visible]="cardsVisible[cardIndex]"
+            [class.hovered]="hoveredCard === cardIndex"
+            (mouseenter)="onCardHover(cardIndex)"
+            (mouseleave)="onCardLeave()">
+            <div class="popular-badge" *ngIf="plan.id === 'plus'">
+                <span class="badge-pulse" aria-hidden="true"></span>
+                {{ labels().plans.mostPopular }}
+            </div>
+            <div class="card-inner">
+                <div class="card-header">
+                    <div class="plan-tier" [class.plan-tier--gold]="plan.id === 'vip'">{{ plan.medal }} {{ plan.tier }}</div>
+                    <h3 class="plan-name">{{ plan.name }}</h3>
+                    <p class="plan-desc">{{ plan.description }}</p>
+                </div>
+                <ul class="features-list" role="list">
+                    <li *ngFor="let feature of plan.features; let i = index; trackBy: trackFeature"
+                        class="feature-item"
+                        [class.visible]="cardsVisible[cardIndex]"
+                        [style.transition-delay]="(0.4 + i * 0.07) + 's'">
+                        <span class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 20 20" fill="none">
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        {{ feature }}
+                    </li>
+                </ul>
+                <button class="cta-btn"
+                    type="button"
+                    [ngClass]="{
+                        'cta-btn--primary': plan.id === 'plus',
+                        'cta-btn--outline': plan.id !== 'plus',
+                        'cta-btn--gold': plan.id === 'vip'
+                    }"
+                    (click)="onGetStarted(plan.id)">
+                    <span class="btn-text">{{ labels().plans.cta }}</span>
+                    <span class="btn-shine" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="card-border-anim" aria-hidden="true" *ngIf="plan.id === 'plus'"></div>
+            <div class="card-glow" [class.card-glow--gold]="plan.id === 'vip'" aria-hidden="true" *ngIf="plan.id !== 'plus'"></div>
+        </div>
+    </div>
+</section>

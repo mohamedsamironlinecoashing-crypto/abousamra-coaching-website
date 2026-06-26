@@ -1,0 +1,61 @@
+<section class="section-header">
+    <h2 class="section-title">{{ labels().transformations.title }}</h2>
+    <p class="section-sub">{{ labels().transformations.subtitle }}</p>
+</section>
+<div class="slider-outer">
+    <button class="slider-nav prev" id="prevBtn" [attr.aria-label]="labels().transformations.previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6" />
+        </svg>
+    </button>
+    <button class="slider-nav next" id="nextBtn" [attr.aria-label]="labels().transformations.next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6" />
+        </svg>
+    </button>
+
+    <div class="slider-track" id="sliderTrack">
+        <div class="transform-card" *ngFor="let card of cards; trackBy: trackCard">
+            <div class="img-slider" [id]="card.id" data-state="default">
+                <img class="side before-img" [src]="card.beforeImage" [alt]="labels().transformations.imageAltBefore"
+                    width="600" height="800" loading="lazy" decoding="async" />
+                <img class="side after-img" [src]="card.afterImage" [alt]="labels().transformations.imageAltAfter"
+                    width="600" height="800" loading="lazy" decoding="async" />
+                <span class="img-label before">{{ labels().transformations.before }}</span>
+                <span class="img-label after">{{ labels().transformations.after }}</span>
+                <div class="divider-handle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 4l-4 8 4 8M16 4l4 8-4 8" />
+                    </svg>
+                </div>
+            </div>
+            <div class="toggle-btns">
+                <button class="btn-toggle" [attr.data-card]="card.id" data-show="before">{{
+                    labels().transformations.before }}</button>
+                <button class="btn-toggle" [attr.data-card]="card.id" data-show="after">{{
+                    labels().transformations.after }}</button>
+            </div>
+            <div class="stats-row">
+                <div class="stat-box" *ngFor="let stat of card.stats; trackBy: trackStat">
+                    <div class="stat-icon" [ngClass]="stat.iconClass">{{ stat.icon }}</div>
+                    <div class="stat-value">
+                        {{ stat.value }}<br *ngIf="stat.unitKey"><span *ngIf="stat.unitKey" style="font-size:1rem">{{
+                            labels().transformations[stat.unitKey] }}</span>
+                    </div>
+                    <div class="stat-label">{{ labels().transformations[stat.labelKey] }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="progress-wrap">
+    <div class="progress-bar-track">
+        <div id="progressBar" class="progress-fill"></div>
+    </div>
+</div>
+
+<div class="dots" id="dots">
+    <div class="dot" *ngFor="let card of cards; let i = index; trackBy: trackCard" [class.active]="i === 0"
+        [attr.data-index]="i"></div>
+</div>

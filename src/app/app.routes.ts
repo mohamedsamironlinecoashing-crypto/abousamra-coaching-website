@@ -1,3 +1,21 @@
 import { Routes } from '@angular/router';
+import { Home } from './components/home/home';
+import { NotFound } from './components/not-found/not-found';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    component: Home,
+    title: 'Coach Mohamed Samir | Online Fitness Coaching',
+  },
+  {
+    path: '404',
+    component: NotFound,
+    title: 'Page Not Found | Coach Mohamed Samir',
+  },
+  {
+    path: '**',
+    component: NotFound,
+    title: 'Page Not Found | Coach Mohamed Samir',
+  },
+];

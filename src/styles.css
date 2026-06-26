@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #07111f;
+  overflow-x: hidden;
+}
+
+/* ── Font switching ─────────────────────────────── */
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #07111f;
+  color: #e8f4ff;
+  overflow-x: hidden;
+}
+
+html[lang='ar'] body {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+html[lang='ar'] input,
+html[lang='ar'] textarea,
+html[lang='ar'] select,
+html[lang='ar'] button {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* ── RTL: logical text alignment ─────────────────── */
+html[dir='rtl'] .about-text,
+html[dir='rtl'] .plan-desc,
+html[dir='rtl'] .faq-content,
+html[dir='rtl'] .pay-card,
+html[dir='rtl'] .outside-card,
+html[dir='rtl'] .help-card,
+html[dir='rtl'] .brand-col,
+html[dir='rtl'] .nav-col,
+html[dir='rtl'] .contact-col {
+  text-align: start;
+}
+
+/* ── RTL: centered sections stay centered ─────────── */
+html[dir='rtl'] .pricing-header,
+html[dir='rtl'] .section-header,
+html[dir='rtl'] .results-header,
+html[dir='rtl'] .faq-header,
+html[dir='rtl'] .payment-header,
+html[dir='rtl'] .cta-section {
+  text-align: center;
+}
+
+/* ── RTL: flex-direction reversals ───────────────── */
+html[dir='rtl'] .feature-item,
+html[dir='rtl'] .stat-pill,
+html[dir='rtl'] .contact-item,
+html[dir='rtl'] .card-action,
+html[dir='rtl'] .whatsapp-btn {
+  flex-direction: row-reverse;
+}
+
+/* ── RTL: slider/carousel — keep LTR scroll ──────── */
+html[dir='rtl'] app-transformations .slider-track,
+html[dir='rtl'] app-transformations .img-slider {
+  direction: ltr;
+}
+
+html[dir='rtl'] app-transformations .stats-row,
+html[dir='rtl'] app-transformations .toggle-btns {
+  direction: rtl;
+}
+
+/* ── RTL: footer row reversals ───────────────────── */
+html[dir='rtl'] .footer-bottom-inner {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .footer-links {
+  flex-direction: row-reverse;
+}
+
+/* ── RTL: info-row reversal ──────────────────────── */
+html[dir='rtl'] .info-row {
+  flex-direction: row-reverse;
+}
+
+/* ── RTL: plans feature entrance animation ───────── */
+html[dir='rtl'] .feature-item {
+  transform: translateX(14px);
+}
+
+html[dir='rtl'] .feature-item.visible {
+  transform: translateX(0);
+}
+
+
+/* ── RTL: about section layout ───────────────────── */
+html[dir='rtl'] .about-section {
+  flex-direction: row-reverse;
+}
+
+/* ── Global button/link tap highlight ────────────── */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  section {
+    scroll-margin-top: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

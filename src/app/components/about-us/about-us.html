@@ -1,0 +1,72 @@
+<div class="page-wrapper">
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="video-box">
+            <img class="side before-img"
+                src="https://res.cloudinary.com/dliuncsot/image/upload/v1782194344/instagram_square_v2_color_1080x1080_rzcu5m.png"
+                [alt]="labels().about.imageAlt" width="700" height="500" loading="lazy" decoding="async" />
+        </div>
+        <div class="about-text">
+            <div class="section-badge">{{ labels().about.badge }}</div>
+            <h1>{{ labels().about.titlePrefix }} <span>{{ labels().about.titleHighlight }}</span></h1>
+            <p>{{ labels().about.story }}</p>
+            <button class="cta-btn" type="button" (click)="onJoinNow()">{{ labels().about.cta }}</button>
+        </div>
+    </div>
+
+    <div style="height:1px; background:#1a3060; max-width:1300px; margin:0 auto;"></div>
+
+    <!-- Certifications Section -->
+    <div class="certs-section">
+        <div class="certs-header">
+            <div class="section-badge">{{ labels().about.certBadge }}</div>
+            <h2>{{ labels().about.certTitlePrefix }} <span>{{ labels().about.certTitleHighlight }}</span></h2>
+        </div>
+
+        <div class="carousel-outer">
+
+            <button class="carousel-btn" type="button" (click)="prev()"
+                [style.opacity]="current === 0 ? '0.35' : '1'"
+                [attr.aria-label]="labels().about.previous">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+
+            <div class="carousel-viewport" #viewport>
+                <div class="carousel-track" [style.transform]="'translateX(' + (isRtl() ? '' : '-') + offset + 'px)'">
+                    <div class="cert-card" *ngFor="let cert of certs; trackBy: trackCert">
+                        <div class="cert-img-wrapper">
+                            <img [src]="cert.image" [alt]="labels().about.certificateAlt + ' ' + cert.year" class="cert-img" width="280"
+                                height="200" loading="lazy" decoding="async" />
+                            <span class="cert-year-badge">{{ cert.year }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn" type="button" (click)="next()"
+                [style.opacity]="current === totalSlides - 1 ? '0.35' : '1'"
+                [attr.aria-label]="labels().about.next">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="dots" role="tablist" [attr.aria-label]="labels().about.certTitleHighlight">
+            <button class="dot" type="button" role="tab"
+                *ngFor="let i of slidesArray"
+                [class.active]="i === current"
+                (click)="goTo(i)"
+                [attr.aria-label]="'Slide ' + (i + 1)"
+                [attr.aria-selected]="i === current">
+            </button>
+        </div>
+    </div>
+
+</div>

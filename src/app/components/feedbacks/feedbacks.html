@@ -1,0 +1,54 @@
+<section class="results-section">
+    <!-- Dots Background -->
+    <div class="dot dot-1"></div>
+    <div class="dot dot-2"></div>
+    <div class="dot dot-3"></div>
+    <div class="dot dot-4"></div>
+
+    <!-- Header -->
+    <div class="results-header">
+        <span class="section-badge">{{ labels().testimonials.badge }}</span>
+        <h2>{{ labels().testimonials.titlePrefix }} <span class="gradient-text">{{ labels().testimonials.titleHighlight }}</span></h2>
+        <p>{{ labels().testimonials.subtitle }}</p>
+    </div>
+
+    <!-- Slider Wrapper -->
+    <div class="slider-wrapper">
+        <!-- Prev Button -->
+        <button class="slider-btn prev-btn" (click)="prev()" [attr.aria-label]="labels().testimonials.previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+
+        <!-- Track -->
+        <div class="slider-viewport" #sliderViewport>
+            <div class="slider-track" [style.transform]="'translateX(' + (isRtl() ? '' : '-') + trackOffset + 'px)'">
+                <div class="slide-card" *ngFor="let slide of slides; let i = index; trackBy: trackSlide" [class.active]="i === activeIndex">
+                    <img [src]="slide.image" [alt]="labels().testimonials.slideAlt + ' ' + slide.alt" width="520" height="694" loading="lazy"
+                        decoding="async" />
+                    <div class="card-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Button -->
+        <button class="slider-btn next-btn" (click)="next()" [attr.aria-label]="labels().testimonials.next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Dots Indicator -->
+    <div class="dots-indicator" role="tablist" [attr.aria-label]="labels().testimonials.titleHighlight">
+        <button class="dot-ind" type="button" role="tab"
+            *ngFor="let dot of indicatorCount; let i = index"
+            [class.active]="i === activeIndex"
+            [attr.aria-selected]="i === activeIndex"
+            [attr.aria-label]="'Slide ' + (i + 1)"
+            (click)="goTo(i)"></button>
+    </div>
+</section>

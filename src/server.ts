@@ -4,8 +4,14 @@ import {
   isMainModule,
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
+import { ɵsetAngularAppEngineManifest } from '@angular/ssr';
 import express from 'express';
 import { join } from 'node:path';
+
+const { default: angularAppEngineManifest } = await import(
+  new URL('./angular-app-engine-manifest.mjs', import.meta.url).href
+);
+ɵsetAngularAppEngineManifest(angularAppEngineManifest);
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
@@ -63,6 +69,6 @@ if (isMainModule(import.meta.url) || process.env['pm_id']) {
 }
 
 /**
- * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
+ * Request handler used by the Angular CLI, Node, or serverless hosts.
  */
-export const reqHandler = createNodeRequestHandler(app);
+export default createNodeRequestHandler(app);

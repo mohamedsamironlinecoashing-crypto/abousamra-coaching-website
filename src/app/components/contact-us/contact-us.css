@@ -1,0 +1,338 @@
+/* ─── Section ─────────────────────────────────────── */
+.payment-section {
+  background: #0c1b31;
+  padding: clamp(72px, 8vw, 100px) clamp(18px, 5vw, 60px);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Header ──────────────────────────────────────── */
+.payment-header {
+  text-align: center;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid rgba(6, 182, 212, 0.25);
+  background: rgba(6, 182, 212, 0.08);
+  color: #06b6d4;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 99px;
+  margin-bottom: 24px;
+}
+
+.payment-badge svg {
+  color: #06b6d4;
+}
+
+.payment-header h2 {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-inline-start: 8px;
+}
+
+.payment-header p {
+  font-size: 15px;
+  color: #64748b;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ─── Grid Layout ─────────────────────────────────── */
+.payment-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ─── Base Card ───────────────────────────────────── */
+.pay-card {
+  background: #091322;
+  border: 1.5px solid #14243b;
+  border-radius: 24px;
+  padding: 40px 32px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.pay-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pay-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ─── Brand Hovers ────────────────────────────────── */
+.instapay-card::before {
+  background: radial-gradient(ellipse at top, rgba(168, 85, 247, 0.05) 0%, transparent 70%);
+}
+.instapay-card:hover {
+  border-color: #a855f7;
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.1);
+}
+.instapay-card:hover::before {
+  opacity: 1;
+}
+
+.fawry-card::before {
+  background: radial-gradient(ellipse at top, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+}
+.fawry-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1);
+}
+.fawry-card:hover::before {
+  opacity: 1;
+}
+
+.whatsapp-card::before {
+  background: radial-gradient(ellipse at top, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
+}
+.whatsapp-card:hover {
+  border-color: #22c55e;
+  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.1);
+}
+.whatsapp-card:hover::before {
+  opacity: 1;
+}
+
+.vodafone-card::before {
+  background: radial-gradient(ellipse at top, rgba(239, 68, 68, 0.05) 0%, transparent 70%);
+}
+.vodafone-card:hover {
+  border-color: #ef4444;
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.1);
+}
+.vodafone-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── Card Icons (Round) ─────────────────────────── */
+.card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1.5px solid;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.pay-card:hover .card-icon {
+  transform: scale(1.08);
+}
+
+.instapay-icon {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.35);
+  color: #a855f7;
+}
+
+.fawry-icon {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #10b981;
+}
+
+.whatsapp-icon {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.35);
+  color: #22c55e;
+}
+
+.vodafone-icon {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #ef4444;
+}
+
+/* ─── Card Typography ─────────────────────────────── */
+.pay-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.pay-number {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+  z-index: 2;
+  overflow-wrap: anywhere;
+}
+
+/* Specific Phone Number Colors from Screenshot */
+.instapay-num {
+  color: #38bdf8;
+}
+.fawry-num {
+  color: #10b981;
+}
+.whatsapp-num {
+  color: #34d399;
+}
+.vodafone-num {
+  color: #f87171;
+}
+
+.pay-card p {
+  font-size: 14.5px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 280px;
+  z-index: 2;
+}
+
+/* ─── Card Action Buttons ─────────────────────────── */
+.card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 99px;
+  border: 1.5px solid;
+  transition: all 0.25s ease;
+  z-index: 2;
+  background: transparent;
+}
+
+/* Brand Button Styling */
+.instapay-action {
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #c084fc;
+}
+.instapay-card:hover .instapay-action {
+  background: #a855f7;
+  border-color: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+}
+
+.fawry-action {
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+.fawry-card:hover .fawry-action,
+.fawry-action.copied {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.whatsapp-action {
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+}
+.whatsapp-card:hover .whatsapp-action {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+}
+
+.vodafone-action {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+.vodafone-card:hover .vodafone-action,
+.vodafone-action.copied {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3);
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 868px) {
+  .payment-section {
+    padding: 80px 24px;
+  }
+  .payment-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-section {
+    padding: 64px 14px;
+  }
+
+  .payment-header {
+    margin-bottom: 36px;
+  }
+
+  .payment-badge {
+    font-size: 12px;
+    padding-inline: 14px;
+  }
+
+  .pay-card {
+    border-radius: 18px;
+    padding: 30px 18px;
+  }
+
+  .pay-card::before {
+    border-radius: 18px;
+  }
+
+  .card-action {
+    width: 100%;
+    padding-inline: 14px;
+  }
+}

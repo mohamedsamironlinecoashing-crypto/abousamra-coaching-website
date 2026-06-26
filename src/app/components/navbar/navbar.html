@@ -1,0 +1,63 @@
+<nav class="navbar" [class.navbar--scrolled]="isScrolled" [class.navbar--floating]="!isScrolled"
+    [class.navbar--rtl]="currentLanguage() === 'ar'">
+    <div class="navbar__inner">
+
+        <!-- Logo -->
+        <a class="navbar__logo" (click)="scrollTo('about')" (keydown.enter)="scrollTo('about')"
+            (keydown.space)="scrollTo('about')" role="button" tabindex="0" style="cursor:pointer">
+            <div>
+                <img src="https://res.cloudinary.com/dliuncsot/image/upload/v1782207457/favicon_256x256_qfjvow.png"
+                    class="coach-img" [alt]="labels().logoAlt" width="50" height="50" decoding="async" />
+            </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="navbar__links" role="list">
+            <li *ngFor="let link of navLinks; trackBy: trackLink">
+                <a class="navbar__link" (click)="scrollTo(link.id)" (keydown.enter)="scrollTo(link.id)" role="button"
+                    tabindex="0">
+                    {{ labels()[link.labelKey] }}
+                </a>
+            </li>
+        </ul>
+
+        <div class="navbar__actions">
+            <!-- Language Button -->
+            <button class="navbar__language" type="button" (click)="toggleLanguage()"
+                [attr.lang]="currentLanguage() === 'ar' ? 'en' : 'ar'">
+                {{ labels().switchLanguage }}
+            </button>
+
+            <!-- CTA Button -->
+            <button class="navbar__cta" type="button" (click)="onJoinNow()">{{ labels().joinNow }}</button>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="navbar__hamburger" type="button" [class.navbar__hamburger--open]="isMobileOpen"
+            (click)="toggleMobileMenu()" [attr.aria-label]="labels().menuToggle" [attr.aria-expanded]="isMobileOpen"
+            aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar__mobile" id="mobileMenu" [class.navbar__mobile--open]="isMobileOpen">
+        <ul class="navbar__mobile-links" role="list">
+            <li *ngFor="let link of navLinks; trackBy: trackLink">
+                <a class="navbar__link" (click)="scrollTo(link.id)" (keydown.enter)="scrollTo(link.id)" role="button"
+                    tabindex="0">
+                    {{ labels()[link.labelKey] }}
+                </a>
+            </li>
+        </ul>
+        <button class="navbar__language navbar__language--mobile" type="button" (click)="toggleLanguage()"
+            [attr.lang]="currentLanguage() === 'ar' ? 'en' : 'ar'">
+            {{ labels().switchLanguage }}
+        </button>
+        <button class="navbar__cta navbar__cta--mobile" type="button" (click)="onJoinNow()">{{ labels().joinNow
+            }}</button>
+    </div>
+</nav>

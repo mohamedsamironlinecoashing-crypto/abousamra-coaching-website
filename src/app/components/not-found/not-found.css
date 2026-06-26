@@ -1,0 +1,237 @@
+/* ── Variables ─────────────────────────────────────────── */
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Page wrapper ──────────────────────────────────────── */
+.not-found {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: radial-gradient(ellipse at 20% 50%, #0d2a4a 0%, #071525 50%, #020d1a 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ── Background glow blobs ─────────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.blob-left {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #0a5299 0%, transparent 70%);
+  top: 10%;
+  left: -100px;
+  animation: blobPulse 6s ease-in-out infinite alternate;
+}
+
+.blob-right {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #0b3d6b 0%, transparent 70%);
+  bottom: 10%;
+  right: -80px;
+  animation: blobPulse 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobPulse {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.15) translateY(-20px);
+  }
+}
+
+/* ── Coach card ────────────────────────────────────────── */
+.coach-card {
+  position: relative;
+  width: 160px;
+  height: 220px;
+  margin-bottom: 2.5rem;
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid rgba(70, 160, 255, 0.25);
+  box-shadow:
+    0 0 30px rgba(30, 120, 255, 0.25),
+    0 0 60px rgba(20, 80, 200, 0.15),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
+  background: #0a1e35;
+}
+
+.coach-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+}
+
+/* ── 404 number ────────────────────────────────────────── */
+.error-code {
+  font-size: clamp(7rem, 18vw, 12rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0 0 0.5rem;
+  letter-spacing: -4px;
+  color: #5ab4ff;
+  text-shadow:
+    0 0 20px rgba(90, 180, 255, 0.9),
+    0 0 40px rgba(60, 140, 255, 0.7),
+    0 0 80px rgba(30, 100, 255, 0.5),
+    0 0 120px rgba(20, 70, 220, 0.3);
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 20px rgba(90, 180, 255, 0.9),
+      0 0 40px rgba(60, 140, 255, 0.7),
+      0 0 80px rgba(30, 100, 255, 0.5);
+  }
+  to {
+    text-shadow:
+      0 0 30px rgba(120, 200, 255, 1),
+      0 0 60px rgba(80, 160, 255, 0.9),
+      0 0 100px rgba(50, 120, 255, 0.7),
+      0 0 140px rgba(30, 80, 230, 0.4);
+  }
+}
+
+/* ── Text ──────────────────────────────────────────────── */
+.error-title {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.error-desc {
+  font-size: 0.95rem;
+  color: rgba(180, 210, 240, 0.7);
+  line-height: 1.6;
+  margin: 0 0 2.5rem;
+  max-width: 380px;
+}
+
+/* ── Buttons ───────────────────────────────────────────── */
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary — solid blue */
+.btn-primary {
+  background: linear-gradient(135deg, #1a7dff 0%, #0a55cc 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(26, 125, 255, 0.45);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3a8fff 0%, #1a65dd 100%);
+  box-shadow: 0 6px 28px rgba(26, 125, 255, 0.65);
+}
+
+/* Outline — dark with border */
+.btn-outline {
+  background: rgba(10, 30, 55, 0.8);
+  color: #c8dff5;
+  border: 1.5px solid rgba(80, 150, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline:hover {
+  background: rgba(20, 50, 90, 0.9);
+  border-color: rgba(100, 170, 255, 0.6);
+  box-shadow: 0 6px 22px rgba(30, 100, 255, 0.25);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .blob-left,
+  .blob-right {
+    width: 280px;
+    height: 280px;
+    filter: blur(60px);
+  }
+
+  .coach-card {
+    width: 130px;
+    height: 180px;
+    margin-bottom: 1.75rem;
+  }
+
+  .error-code {
+    letter-spacing: -2px;
+  }
+
+  .error-desc {
+    margin-bottom: 1.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
