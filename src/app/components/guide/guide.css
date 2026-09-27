@@ -1,5 +1,5 @@
 .faq-section {
-  background: #0a1628;
+  background: #08080c;
   padding: clamp(64px, 7vw, 80px) clamp(18px, 4vw, 40px);
   min-height: 100svh;
 }
@@ -12,14 +12,14 @@
 
 .faq-header h2 {
   font-size: clamp(32px, 5vw, 56px);
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   margin-bottom: 16px;
   line-height: 1.15;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  background: linear-gradient(90deg, #ffd700, #d4af37);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -27,7 +27,7 @@
 
 .faq-header p {
   font-size: 16px;
-  color: #94a3b8;
+  color: #a0a0b5;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.7;
@@ -44,8 +44,8 @@
 
 /* FAQ Item */
 .faq-item {
-  background: #0d1f3a;
-  border: 1px solid #1a3060;
+  background: #111218;
+  border: 1px solid rgba(212, 175, 55, 0.18);
   border-radius: 14px;
   overflow: hidden;
   transition:
@@ -54,10 +54,10 @@
 }
 
 .faq-item.open {
-  border-color: #3b82f6;
+  border-color: #ffd700;
   box-shadow:
-    0 0 0 1px rgba(59, 130, 246, 0.2),
-    0 8px 32px rgba(59, 130, 246, 0.08);
+    0 0 0 1px rgba(255, 215, 0, 0.25),
+    0 8px 32px rgba(212, 175, 55, 0.12);
 }
 
 /* Trigger Button */
@@ -82,7 +82,7 @@
 }
 
 .faq-item.open .faq-title {
-  color: #ffffff;
+  color: #ffd700;
 }
 
 /* Chevron Icon */
@@ -94,8 +94,8 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
+  background: rgba(212, 175, 55, 0.12);
+  color: #ffd700;
   transition:
     transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     background 0.3s ease;
@@ -103,7 +103,7 @@
 
 .faq-item.open .faq-icon {
   transform: rotate(180deg);
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(212, 175, 55, 0.25);
 }
 
 /* Animated Body */
@@ -124,7 +124,7 @@
 /* Content */
 .faq-content {
   padding: 0 28px 24px;
-  border-top: 1px solid #1a3060;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
   padding-top: 20px;
 }
 
@@ -155,7 +155,7 @@
 
 .faq-content p {
   font-size: 14px;
-  color: #94a3b8;
+  color: #a0a0b5;
   line-height: 1.85;
   margin-bottom: 14px;
 }
@@ -171,7 +171,7 @@
 
 .faq-content ul li {
   font-size: 14px;
-  color: #94a3b8;
+  color: #a0a0b5;
   padding-inline-start: 20px;
   position: relative;
   line-height: 1.7;
@@ -185,5 +185,5 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #3b82f6;
+  background: #ffd700;
 }

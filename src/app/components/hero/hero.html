@@ -1,29 +1,29 @@
-<section id="hero" class="pt-28 sm:pt-36 pb-16 bg-[#0a0a0a] min-h-[85vh] flex items-center">
+<section id="hero" class="pt-28 sm:pt-36 pb-16 bg-[#08080c] min-h-[85vh] flex items-center">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full">
     
     <!-- Hero Card Container -->
-    <div class="bg-[#141414] border border-[#262626] rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xl">
+    <div class="bg-[#111218] border border-[rgba(212,175,55,0.2)] rounded-2xl p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
         <!-- Left / Hero Text Content -->
         <div class="lg:col-span-7 space-y-6 text-left rtl:text-right">
           
           <!-- Badge -->
-          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#0a0a0a] border border-[#262626] text-xs font-semibold text-[#a3a3a3]">
-            <span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-[#08080c] border border-[rgba(212,175,55,0.35)] text-xs font-semibold text-[#ffd700]">
+            <span class="w-2 h-2 rounded-full bg-[#ffd700] animate-pulse"></span>
             <span>{{ labels().hero.badge }}</span>
           </div>
 
           <!-- Bold White Headline -->
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
             {{ labels().hero.titlePrefix }}
-            <span class="text-[#f59e0b] block mt-1">
+            <span class="bg-gradient-to-r from-[#ffd700] via-[#d4af37] to-[#aa771c] bg-clip-text text-transparent block mt-1">
               {{ labels().hero.titleHighlight }}
             </span>
           </h1>
 
-          <!-- Clean Gray Sub-headline -->
-          <p class="text-[#a3a3a3] text-base sm:text-lg font-normal leading-relaxed max-w-xl">
+          <!-- Clean Sub-headline -->
+          <p class="text-[#a0a0b0] text-base sm:text-lg font-normal leading-relaxed max-w-xl">
             {{ labels().hero.subtitle }}
           </p>
 
@@ -32,7 +32,7 @@
             <button 
               type="button" 
               (click)="onStartJourney()"
-              class="bg-[#f59e0b] hover:bg-[#d97706] text-black font-bold px-8 py-3.5 rounded-xl transition-all inline-flex items-center justify-center shadow-lg text-center">
+              class="bg-gradient-to-r from-[#d4af37] via-[#ffd700] to-[#aa771c] hover:brightness-110 text-black font-extrabold px-8 py-3.5 rounded-xl transition-all inline-flex items-center justify-center shadow-[0_4px_25px_rgba(212,175,55,0.4)] text-center cursor-pointer">
               {{ labels().hero.ctaPrimary }}
               <svg class="w-5 h-5 ml-2 rtl:ml-0 rtl:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -42,24 +42,24 @@
             <button 
               type="button" 
               (click)="onViewResults()"
-              class="bg-[#0a0a0a] hover:bg-[#1a1a1a] text-neutral-300 hover:text-white border border-[#262626] font-semibold px-7 py-3.5 rounded-xl transition-all inline-flex items-center justify-center">
+              class="bg-[#08080c] hover:bg-[#181822] text-[#ffd700] hover:text-white border border-[rgba(212,175,55,0.35)] font-semibold px-7 py-3.5 rounded-xl transition-all inline-flex items-center justify-center cursor-pointer">
               {{ labels().hero.ctaSecondary }}
             </button>
           </div>
 
           <!-- Clear 3-Column Stat Counter Grid -->
-          <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-[#262626] w-full">
+          <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-[rgba(212,175,55,0.15)] w-full">
             <div>
               <div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">500+</div>
-              <div class="text-xs text-[#a3a3a3] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat1 }}</div>
+              <div class="text-xs text-[#a0a0b0] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat1 }}</div>
             </div>
             <div>
               <div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">10+ Yrs</div>
-              <div class="text-xs text-[#a3a3a3] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat2 }}</div>
+              <div class="text-xs text-[#a0a0b0] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat2 }}</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-[#f59e0b] tracking-tight">98%</div>
-              <div class="text-xs text-[#a3a3a3] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat3 }}</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#ffd700] tracking-tight">98%</div>
+              <div class="text-xs text-[#a0a0b0] mt-1 font-medium uppercase tracking-wider">{{ labels().hero.stat3 }}</div>
             </div>
           </div>
 
@@ -67,18 +67,18 @@
 
         <!-- Right / Coach Image -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-sm aspect-[4/5] rounded-xl overflow-hidden border border-[#262626] bg-[#0a0a0a]">
+          <div class="relative w-full max-w-sm aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(212,175,55,0.3)] bg-[#08080c] shadow-[0_0_30px_rgba(212,175,55,0.15)]">
             <img 
               src="https://res.cloudinary.com/dliuncsot/image/upload/v1782194344/instagram_square_v2_color_1080x1080_rzcu5m.png" 
               [alt]="labels().hero.coachAlt"
               class="w-full h-full object-cover object-center"
               loading="eager"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111218] via-transparent to-transparent opacity-85"></div>
             
-            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#0a0a0a]/90 backdrop-blur-md border border-[#262626] text-left rtl:text-right">
-              <p class="text-xs uppercase tracking-wider text-[#f59e0b] font-bold">COACH ABOU SAMRA</p>
-              <p class="text-xs text-[#a3a3a3] font-medium mt-0.5">Certified Fitness & Nutrition Specialist</p>
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#08080c]/90 backdrop-blur-md border border-[rgba(212,175,55,0.3)] text-left rtl:text-right">
+              <p class="text-xs uppercase tracking-wider text-[#ffd700] font-bold">COACH ABOU SAMRA</p>
+              <p class="text-xs text-[#a0a0b0] font-medium mt-0.5">Certified Fitness & Nutrition Specialist</p>
             </div>
           </div>
         </div>
