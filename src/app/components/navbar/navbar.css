@@ -394,8 +394,12 @@
 .navbar__logo .coach-img {
   display: block;
   margin: 0 auto;
-  border-radius: 30px; /* أضف دي */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 .navbar__logo div {
   display: flex;
   align-items: center;
@@ -410,19 +414,4 @@
   white-space: nowrap;
   text-transform: uppercase;
 }
-:host {
-  display: block;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-:host {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  
-}
