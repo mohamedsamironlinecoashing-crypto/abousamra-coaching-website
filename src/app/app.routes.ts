@@ -6,16 +6,16 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
-    title: 'Coach Mohamed Samir | Online Fitness Coaching',
+    title: 'COACH ABOU SAMRA | Online Fitness Coaching',
   },
   {
     path: '404',
     component: NotFound,
-    title: 'Page Not Found | Coach Mohamed Samir',
+    title: 'Page Not Found | COACH ABOU SAMRA',
   },
   {
     path: '**',
     component: NotFound,
-    title: 'Page Not Found | Coach Mohamed Samir',
+    title: 'Page Not Found | COACH ABOU SAMRA',
   },
 ];

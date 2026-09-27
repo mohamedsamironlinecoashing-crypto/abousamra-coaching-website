@@ -1,5 +1,5 @@
 /* ===========================
-   Coach Mohamed Samir Navbar — Angular Component
+   COACH ABOU SAMRA Navbar — Angular Component
    =========================== */
 
 :host {
@@ -399,6 +399,16 @@
 .navbar__logo div {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.navbar__logo .logo-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 :host {
   display: block;

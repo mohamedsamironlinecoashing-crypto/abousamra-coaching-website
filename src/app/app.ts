@@ -42,7 +42,7 @@ export class App {
     if (typeof window !== 'undefined') {
       link.setAttribute('href', window.location.origin + window.location.pathname);
     } else {
-      link.setAttribute('href', 'https://mohamedsamircoaching.com/');
+      link.setAttribute('href', 'https://abousamracoaching.me/');
     }
   }
 
@@ -58,10 +58,10 @@ export class App {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      'name': 'Mohamed Samir',
+      'name': 'Coach Abou Samra',
       'jobTitle': 'Certified Fitness Coach & Nutritionist',
       'description': description,
-      'url': typeof window !== 'undefined' ? window.location.origin : 'https://mohamedsamircoaching.com',
+      'url': typeof window !== 'undefined' ? window.location.origin : 'https://abousamracoaching.me',
       'telephone': '+201224251147',
       'contactPoint': {
         '@type': 'ContactPoint',

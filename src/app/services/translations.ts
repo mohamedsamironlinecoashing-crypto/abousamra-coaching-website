@@ -1,9 +1,21 @@
 export const translations = {
   en: {
     seo: {
-      title: 'Coach Mohamed Samir | Online Fitness Coaching',
+      title: 'COACH ABOU SAMRA | Online Fitness Coaching',
       description:
-        'Transform your body with Coach Mohamed Samir. Personalized fitness coaching, nutrition guidance, fat loss, muscle building, and ongoing support.',
+        'Transform your body with COACH ABOU SAMRA. Personalized fitness coaching, nutrition guidance, fat loss, muscle building, and ongoing support.',
+    },
+    hero: {
+      badge: 'ONLINE COACHING',
+      titlePrefix: 'TRANSFORM YOUR BODY & LIFE WITH ',
+      titleHighlight: 'COACH ABOU SAMRA',
+      subtitle: 'Personalized training & nutrition plans engineered for your goals with 1-on-1 expert support.',
+      ctaPrimary: 'Start Your Journey',
+      ctaSecondary: 'View Results',
+      stat1: 'TRANSFORMATIONS',
+      stat2: 'EXPERIENCE',
+      stat3: 'SUCCESS RATE',
+      coachAlt: 'Coach Abou Samra photo',
     },
     navbar: {
       home: 'Home',
@@ -18,11 +30,26 @@ export const translations = {
       menuToggle: 'Toggle menu',
       logoAlt: 'Coach logo',
     },
+    howItWorks: {
+      badge: 'PROCESS',
+      titlePrefix: 'How It',
+      titleHighlight: 'Works',
+      subtitle: 'Simple 3-step system to achieve your fitness goals.',
+      step1Title: 'Select Your Plan',
+      step1Desc: 'Choose the coaching package that fits your goals and lifestyle.',
+      step1Tag: 'Step 1: Choose Package',
+      step2Title: 'Personalized Assessment',
+      step2Desc: 'Fill out the questionnaire so we can design your custom plan.',
+      step2Tag: 'Step 2: Custom Plan',
+      step3Title: 'Start Transformation',
+      step3Desc: 'Follow your plan with continuous guidance and follow-up.',
+      step3Tag: 'Step 3: Results',
+    },
     about: {
-      imageAlt: 'Coach Mohamed Samir transformation photo',
+      imageAlt: 'COACH ABOU SAMRA transformation photo',
       badge: 'ABOUT US',
       titlePrefix: 'About',
-      titleHighlight: 'Coach Mohamed Samir',
+      titleHighlight: 'COACH ABOU SAMRA',
       story:
         "My journey began at a point I never imagined I'd overcome; in 2020, my weight exceeded 300 kilograms, to the point where I couldn't even find a scale capable of measuring it. The real turning point came after a severe illness that confined me to bed for days, forcing me to completely reconsider my life. From there, through sheer self-discipline and independent study of nutrition and training science, I managed by 2021 to bring my weight down to 188 kilograms, without any surgical intervention or professional nutritionist support. That same year, I made the decision to take the next step and undergo bariatric sleeve surgery, and in 2022 I began formal academic studies specializing in sports science and nutrition. I continued my weight-loss journey until reaching 82 kilograms in 2023, the same year I earned two international certifications as a certified coach from ISSA and TASS academies, making me the first coach to hold internationally and locally accredited certifications in training and nutrition among those who have personally undergone bariatric surgery. From there, I entered a new phase focused on building muscle, and my weight has since stabilized at 100 kilograms. This rare combination of personal experience and proven scientific knowledge gives me a deep understanding of my clients' needs, particularly those navigating life after bariatric surgery, which led me to work alongside specialized medical teams in Egypt and the Gulf supporting bariatric surgery patients. Today, I believe every person has their own path and story, and I don't advise anyone to follow my exact steps, but I offer every client an experience grounded in real science and lived experience, not theory alone.",
       cta: 'Transform Your Life',
@@ -147,18 +174,18 @@ export const translations = {
         {
           title: 'Medical Disclaimer & Client Responsibility',
           description:
-            'All nutritional programs, workout plans, and advice provided by Mohamed Samir Coaching are for educational and informational purposes only and do not substitute for professional medical advice, diagnosis, or treatment.',
+            'All nutritional programs, workout plans, and advice provided by Abou Samra Coaching are for educational and informational purposes only and do not substitute for professional medical advice, diagnosis, or treatment.',
           points: [
             'Client must certify that all health information provided during registration is accurate and complete',
             'It is your sole responsibility to ensure you are physically and medically fit before starting any program',
-            'Mohamed Samir Coaching holds no liability for complications arising from inaccurate or concealed health information',
+            'Abou Samra Coaching holds no liability for complications arising from inaccurate or concealed health information',
             'Minimum age to subscribe independently is 16 years; under 16 requires explicit parental or guardian consent',
           ],
         },
         {
           title: 'Natural Training & Anti-Steroid Policy',
           description:
-            'Mohamed Samir Coaching is strictly built on the foundations of natural training and healthy nutrition.',
+            'Abou Samra Coaching is strictly built on the foundations of natural training and healthy nutrition.',
           points: [
             'We do not recommend, promote, or support the use of anabolic steroids or hormones',
             'Use of prohibited or harmful substances is not endorsed under any circumstances',
@@ -190,18 +217,18 @@ export const translations = {
         {
           title: 'Follow-Up, Progress Tracking & Results',
           description:
-            'All follow-ups, assessments, and continuous plan adjustments are conducted personally and directly by Coach Mohamed Samir.',
+            'All follow-ups, assessments, and continuous plan adjustments are conducted personally and directly by COACH ABOU SAMRA.',
           points: [
             'Client commits to sending tracking data and updates on designated check-in dates',
             'Accurate evaluation depends on timely and honest data submission from the client',
             'Results vary based on genetics, metabolic rate, lifestyle, and medical history',
-            'Mohamed Samir Coaching does not guarantee specific results within a set timeframe — success depends on your consistency',
+            'Abou Samra Coaching does not guarantee specific results within a set timeframe — success depends on your consistency',
           ],
         },
         {
           title: 'Intellectual Property & Account Sharing',
           description:
-            'All custom plans, schedules, educational content, and resources are the exclusive intellectual property of Mohamed Samir Coaching.',
+            'All custom plans, schedules, educational content, and resources are the exclusive intellectual property of Abou Samra Coaching.',
           points: [
             'Sharing account credentials, reselling, or distributing any part of the plans or content is strictly prohibited',
             'Violations will result in immediate account termination and potential legal action',
@@ -215,7 +242,7 @@ export const translations = {
             'Mutual respect and professional behavior are mandatory throughout all communication and follow-ups.',
           points: [
             'All interactions must be conducted with respect and professionalism',
-            'Mohamed Samir Coaching reserves the right to terminate any subscription immediately without a refund',
+            'Abou Samra Coaching reserves the right to terminate any subscription immediately without a refund',
             'Termination may occur in the event of verbal abuse, harassment, or inappropriate conduct',
           ],
         },
@@ -285,9 +312,21 @@ export const translations = {
   },
   ar: {
     seo: {
-      title: 'الكابتن محمد سمير | تدريب أونلاين',
+      title: 'كابتن أبو سمرة | تدريب أونلاين',
       description:
-        'غير جسمك وحياتك مع الكابتن محمد سمير. تدريب رياضي مخصص، خطط تغذية احترافية، خسارة الدهون، بناء العضلات ومتابعة مستمرة.',
+        'غير جسمك وحياتك مع كابتن أبو سمرة. تدريب رياضي مخصص، خطط تغذية احترافية، خسارة الدهون، بناء العضلات ومتابعة مستمرة.',
+    },
+    hero: {
+      badge: 'تدريب أونلاين',
+      titlePrefix: 'غير جسمك وحياتك مع ',
+      titleHighlight: 'كابتن أبو سمرة',
+      subtitle: 'خطط تدريب وتغذية مخصصة مصممة لأهدافك مع متابعة شخصية 1-على-1.',
+      ctaPrimary: 'ابدأ رحلتك الآن',
+      ctaSecondary: 'عرض النتائج',
+      stat1: 'تحول ناجح',
+      stat2: 'خبرة تدريبية',
+      stat3: 'نسبة النجاح',
+      coachAlt: 'صورة كابتن أبو سمرة',
     },
     navbar: {
       home: 'الرئيسية',
@@ -302,11 +341,26 @@ export const translations = {
       menuToggle: 'فتح أو إغلاق القائمة',
       logoAlt: 'شعار المدرب',
     },
+    howItWorks: {
+      badge: 'طريقة العمل',
+      titlePrefix: 'كيف نعمل ',
+      titleHighlight: 'معاً',
+      subtitle: 'نظام بسيط من 3 خطوات لتحقيق أهدافك الرياضية.',
+      step1Title: 'اختر باقتك',
+      step1Desc: 'اختر باقة التدريب الأنسب لأهدافك ونمط حياتك.',
+      step1Tag: 'الخطوة 1: اختيار الباقة',
+      step2Title: 'التقييم الشخصي',
+      step2Desc: 'قم بتعبئة بياناتك لنصمم لك خطة مخصصة بالكامل.',
+      step2Tag: 'الخطوة 2: الخطة المخصصة',
+      step3Title: 'ابدأ التحول',
+      step3Desc: 'اتبع خطتك مع المتابعة المستمرة والتعديلات الدورية.',
+      step3Tag: 'الخطوة 3: النتائج',
+    },
     about: {
-      imageAlt: 'صورة تحول الكابتن محمد سمير',
+      imageAlt: 'صورة تحول كابتن أبو سمرة',
       badge: 'من أنا',
       titlePrefix: 'عن',
-      titleHighlight: 'الكابتن محمد سمير',
+      titleHighlight: 'كابتن أبو سمرة',
       story:
         'بدأت رحلتي من نقطة لم أتخيل يوما أنني سأتجاوزها؛ ففي عام 2020 تخطى وزني 300 كيلوجرام، حتى إنني لم أكن أجد ميزانا قادرا على قياسه. جاءت نقطة التحول الحقيقية بعد وعكة صحية شديدة ألزمتني الفراش لأيام، ودفعتني لإعادة النظر في حياتي بالكامل. من هنا، وبالانضباط الذاتي والدراسة المستقلة لعلوم التغذية والتدريب، استطعت بحلول عام 2021 أن أخفض وزني إلى 188 كيلوجراما، من دون أي تدخل جراحي أو متابعة مع أخصائي تغذية. وفي العام نفسه اتخذت قرار الخطوة التالية بإجراء عملية تكميم المعدة، ثم بدأت في عام 2022 دراسة أكاديمية متخصصة في علوم الرياضة والتغذية. واصلت رحلة خسارة الوزن حتى وصلت إلى 82 كيلوجراما في عام 2023، وهو العام نفسه الذي حصلت فيه على شهادتين دوليتين كمدرب معتمد من أكاديميتي ISSA وTASS، لأصبح أول مدرب يجمع بين شهادات معتمدة دوليا ومحليا في التدريب والتغذية وبين تجربة شخصية حقيقية مع جراحة السمنة. بعد ذلك دخلت مرحلة جديدة ركزت فيها على بناء الكتلة العضلية، واستقر وزني منذ ذلك الحين عند 100 كيلوجرام. هذا المزيج النادر بين التجربة الشخصية والمعرفة العلمية الموثوقة يمنحني فهما عميقا لاحتياجات عملائي، خصوصا من يمرون بمرحلة ما بعد جراحات السمنة، وهو ما قادني للعمل إلى جانب فرق طبية متخصصة في مصر والخليج لدعم مرضى جراحات السمنة. اليوم أؤمن أن لكل شخص طريقه وقصته، ولا أنصح أحدا بأن يكرر خطواتي حرفيا، لكنني أقدم لكل عميل تجربة مبنية على علم حقيقي وخبرة معاشة، لا على النظريات وحدها.',
       cta: 'ابدأ تحولك الآن',
@@ -429,18 +483,18 @@ export const translations = {
         {
           title: 'إخلاء المسؤولية الطبية ومسؤولية العميل',
           description:
-            'جميع البرامج الغذائية وخطط التدريب والنصائح المقدمة من Mohamed Samir Coaching هي لأغراض تعليمية وإرشادية فقط، ولا تعد بديلا عن الاستشارة الطبية أو التشخيص أو العلاج من مختص.',
+            'جميع البرامج الغذائية وخطط التدريب والنصائح المقدمة من Abou Samra Coaching هي لأغراض تعليمية وإرشادية فقط، ولا تعد بديلا عن الاستشارة الطبية أو التشخيص أو العلاج من مختص.',
           points: [
             'يجب على العميل التأكيد أن جميع المعلومات الصحية المقدمة أثناء التسجيل دقيقة وكاملة',
             'تقع على العميل وحده مسؤولية التأكد من جاهزيته البدنية والطبية قبل بدء أي برنامج',
-            'لا تتحمل Mohamed Samir Coaching أي مسؤولية عن مضاعفات ناتجة عن معلومات صحية غير دقيقة أو مخفية',
+            'لا تتحمل Abou Samra Coaching أي مسؤولية عن مضاعفات ناتجة عن معلومات صحية غير دقيقة أو مخفية',
             'الحد الأدنى للاشتراك المستقل هو 16 عاما، ومن هم دون ذلك يحتاجون إلى موافقة صريحة من ولي الأمر',
           ],
         },
         {
           title: 'التدريب الطبيعي وسياسة رفض المنشطات',
           description:
-            'تعتمد Mohamed Samir Coaching بشكل كامل على أسس التدريب الطبيعي والتغذية الصحية.',
+            'تعتمد Abou Samra Coaching بشكل كامل على أسس التدريب الطبيعي والتغذية الصحية.',
           points: [
             'لا نوصي ولا نروج ولا ندعم استخدام المنشطات البنائية أو الهرمونات',
             'لا يتم تأييد استخدام أي مواد محظورة أو ضارة تحت أي ظرف',
@@ -471,18 +525,18 @@ export const translations = {
         {
           title: 'المتابعة وقياس التقدم والنتائج',
           description:
-            'تتم جميع المتابعات والتقييمات والتعديلات المستمرة على الخطة بشكل شخصي ومباشر بواسطة الكابتن محمد سمير.',
+            'تتم جميع المتابعات والتقييمات والتعديلات المستمرة على الخطة بشكل شخصي ومباشر بواسطة كابتن أبو سمرة.',
           points: [
             'يلتزم العميل بإرسال بيانات المتابعة والتحديثات في المواعيد المحددة',
             'يعتمد التقييم الدقيق على إرسال بيانات صادقة وفي الوقت المناسب من العميل',
             'تختلف النتائج حسب الجينات ومعدل الحرق ونمط الحياة والتاريخ الطبي',
-            'لا تضمن Mohamed Samir Coaching نتيجة محددة خلال فترة زمنية ثابتة، فالنجاح يعتمد على التزامك',
+            'لا تضمن Abou Samra Coaching نتيجة محددة خلال فترة زمنية ثابتة، فالنجاح يعتمد على التزامك',
           ],
         },
         {
           title: 'الملكية الفكرية ومشاركة الحساب',
           description:
-            'جميع الخطط والجداول والمحتوى التعليمي والموارد المخصصة هي ملكية فكرية حصرية لـ Mohamed Samir Coaching.',
+            'جميع الخطط والجداول والمحتوى التعليمي والموارد المخصصة هي ملكية فكرية حصرية لـ Abou Samra Coaching.',
           points: [
             'يمنع تماما مشاركة بيانات الحساب أو إعادة بيع أو توزيع أي جزء من الخطط أو المحتوى',
             'أي مخالفة قد تؤدي إلى إنهاء الحساب فورا واتخاذ إجراءات قانونية عند الحاجة',
@@ -495,7 +549,7 @@ export const translations = {
           description: 'الاحترام المتبادل والسلوك المهني مطلوبان في جميع مراحل التواصل والمتابعة.',
           points: [
             'يجب أن تتم جميع التعاملات باحترام واحترافية',
-            'تحتفظ Mohamed Samir Coaching بحق إنهاء أي اشتراك فورا دون استرداد',
+            'تحتفظ Abou Samra Coaching بحق إنهاء أي اشتراك فورا دون استرداد',
             'قد يحدث الإنهاء في حالة الإساءة اللفظية أو المضايقة أو أي سلوك غير لائق',
           ],
         },
@@ -522,8 +576,8 @@ export const translations = {
       ctaTitleSuffix: '؟',
       ctaText: 'انضم إلى برنامج التدريب وابدأ رحلة التحول من اليوم.',
       ctaButton: 'اشترك الآن',
-      brandFirst: 'الكابتن محمد',
-      brandSecond: ' سمير',
+      brandFirst: 'كابتن أبو',
+      brandSecond: ' سمرة',
       description:
         'نساعد العملاء على تغيير أجسامهم وطريقة تفكيرهم ونمط حياتهم من خلال تدريب أونلاين احترافي.',
       stats: ['تدريب أونلاين حول العالم', 'خطط تغذية شخصية', 'برامج تدريب مخصصة'],
