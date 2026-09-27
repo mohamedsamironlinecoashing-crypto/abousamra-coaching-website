@@ -65,20 +65,29 @@
 
         </div>
 
-        <!-- Right / Coach Image -->
+        <!-- Right / Coach Cover Image with Luxury Brand Overlay -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-sm aspect-[4/5] rounded-xl overflow-hidden border border-[rgba(212,175,55,0.3)] bg-[#08080c] shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+          <div class="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden border border-[rgba(212,175,55,0.35)] bg-[#08080c] shadow-[0_0_35px_rgba(212,175,55,0.18)]">
             <img 
               src="https://res.cloudinary.com/dliuncsot/image/upload/v1782194344/instagram_square_v2_color_1080x1080_rzcu5m.png" 
               [alt]="labels().hero.coachAlt"
               class="w-full h-full object-cover object-center"
               loading="eager"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#111218] via-transparent to-transparent opacity-85"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#08080c] via-transparent to-transparent opacity-90"></div>
             
-            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#08080c]/90 backdrop-blur-md border border-[rgba(212,175,55,0.3)] text-left rtl:text-right">
-              <p class="text-xs uppercase tracking-wider text-[#ffd700] font-bold">COACH ABOU SAMRA</p>
-              <p class="text-xs text-[#a0a0b0] font-medium mt-0.5">Certified Fitness & Nutrition Specialist</p>
+            <!-- Luxury Dark & Gold Brand Badge Overlay on Hero Cover Photo -->
+            <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#08080c]/92 backdrop-blur-md border border-[rgba(212,175,55,0.45)] shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_15px_rgba(212,175,55,0.25)] flex items-center gap-3.5 text-left rtl:text-right">
+              <img 
+                src="assets/logo.png" 
+                alt="COACH ABOU SAMRA Logo" 
+                class="w-11 h-11 rounded-full object-cover border-2 border-[#ffd700] shadow-[0_0_12px_rgba(255,215,0,0.4)] flex-shrink-0"
+                decoding="async" 
+              />
+              <div class="min-w-0 flex-1">
+                <p class="text-sm uppercase tracking-wider text-[#ffd700] font-extrabold leading-snug drop-shadow">COACH ABOU SAMRA</p>
+                <p class="text-xs text-[#a0a0b0] font-medium mt-0.5 truncate">Certified Fitness & Nutrition Specialist</p>
+              </div>
             </div>
           </div>
         </div>
