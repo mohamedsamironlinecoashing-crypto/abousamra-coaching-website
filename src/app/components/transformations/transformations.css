@@ -218,6 +218,45 @@
   opacity: 0;
 }
 
+/* ── Watermark Brand Overlay ── */
+.card-watermark {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 8, 12, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50px;
+  padding: 5px 14px 5px 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75), 0 0 15px rgba(212, 175, 55, 0.25);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.watermark-logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  display: block;
+}
+
+.watermark-text {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #ffd700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* ── Toggle Buttons ── */
 .toggle-btns {
   display: flex;
