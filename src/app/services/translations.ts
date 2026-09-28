@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     seo: {
-      title: 'COACH ABOU SAMRA | Online Fitness Coaching',
+      title: 'Abou samra Coaching Master of Transformations',
       description:
         'Transform your body with COACH ABOU SAMRA. Personalized fitness coaching, nutrition guidance, fat loss, muscle building, and ongoing support.',
     },
@@ -312,7 +312,7 @@ export const translations = {
   },
   ar: {
     seo: {
-      title: 'كابتن أبو سمرة | تدريب أونلاين',
+      title: 'Abou samra Coaching Master of Transformations',
       description:
         'غير جسمك وحياتك مع كابتن أبو سمرة. تدريب رياضي مخصص، خطط تغذية احترافية، خسارة الدهون، بناء العضلات ومتابعة مستمرة.',
     },
